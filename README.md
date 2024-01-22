@@ -42,6 +42,10 @@ Follow the following steps to run the project successfully:
 
 `pip install -r requirements.txt`
 
-### 4. Run project
+### 4. Run migrations
+
+`python manage.py migrate`
+
+### 5. Run project
 
 `python manage.py runserver`
