@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+<br />
+{% block title %}Todo App | Delete Task{% endblock title %} {% block content %}
+<main class="m-3">
+  <h2 class="fs-1 text-center text-info">Delete Task</h2>
+  <section class="container d-flex flex-column w-50 bg-light">
+    <p class="fs-2 text-warning">
+      Are you sure you want to delete
+      <span class="text-info">"{{task.title | title}}"?</span>
+    </p>
+    <div class="container d-flex">
+      <a href="{%url 'home'%}" class="btn btn-primary" style="margin-right: 5px"
+        >Cancel</a
+      >
+      <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Confirm" class="btn btn-danger" />
+      </form>
+    </div>
+  </section>
+</main>
+
+{% endblock content %}

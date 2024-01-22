@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+<br />
+{% block title %}Todo App | View Task{% endblock title %} {% block content %}
+<section
+  class="container m-3 d-flex justify-content-center flex-column text-info align-items-center"
+>
+  <h2 class="text-center fs-1">Task Details</h2>
+  <div
+    class="container w-50 bg-light d-flex flex-column m-3 p-3 rounded fs-4 text-secondary align-items-center"
+  >
+    <p>Title: <span class="text-info">{{task.title | title}}</span></p>
+    <p>Description: <span class="text-info">{{task.description}}</span></p>
+    <p>Due Date: <span class="text-info">{{task.due_date}}</span></p>
+    <p>Due Time: <span class="text-info">{{task.due_time}}</span></p>
+    <p>Id: <span class="text-info">{{task.id}}</span></p>
+    <p>Is Completed?: <span class="text-info">{{task.completed}}</span></p>
+    <a href="{%url 'home'%}" class="btn btn-secondary w-25 rounded-pill"
+      >Go Back</a
+    >
+  </div>
+</section>
+{% endblock content %}

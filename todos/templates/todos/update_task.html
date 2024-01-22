@@ -1,0 +1,15 @@
+{% extends 'base.html' %} <br />
+{% block title %}Todo App | Update Task {%endblock title %} {% block content %}
+<section class="container">
+  <h1 class="text-center text-info">Update Task</h1>
+
+  <form
+    action=""
+    method="post"
+    class="container bg-white d-flex flex-column align-items-start justify-content-center w-50 mt-2 p-3 rounded"
+  >
+    {% csrf_token %} {{form}}
+    <input type="submit" value="Update Task" class="btn btn-primary" />
+  </form>
+</section>
+{% endblock content %}

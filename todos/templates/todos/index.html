@@ -7,9 +7,21 @@
             <a href="{%url 'add'%}" class="btn btn-primary rounded-pill text-white p-2 m-2">&#10009;Add new</a>
     </main>
     <section class="container w-50 bg-light mt-3 p-3 text-light">
-        <h2 class="fs-1 text-secondary text-center">Tasks</h2>
+        <h2 class="fs-1 text-info text-center">Tasks</h2>
         {% for task in tasks %}
-            <p class="bg-info p-4 fs-2">{{task.title | title}}</p>
+        <div class="d-flex justify-content-between bg-info align-items-center border-5 border-bottom border-white m-2 p-1 rounded">
+                {% if task.completed == True %}
+                <strike class=" p-4 fs-2">{{task.title | title}}</strike>
+                {% else %}
+                <p class=" p-4 fs-2">{{task.title | title}}</p>
+                {% endif %}
+            <div class="d-flex justfy-content-evenly">
+                <a href="{%url 'view_task' task.id%}" class="nav-link text-white btn btn-primary" style="margin-right: 5px;">View</a>
+                <a href="{%url 'update_task' task.id%}" class="nav-link text-white btn btn-warning" style="margin-right: 5px;">Update</a>
+                <a href="{%url 'delete_task' task.id%}" class="nav-link text-white btn btn-danger" style="padding-right: 5px; margin-right: 5px;">Delete</a>
+            </div>
+        </div>
+        
         {% endfor %}
     </section>
 </div>
