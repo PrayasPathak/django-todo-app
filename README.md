@@ -36,7 +36,7 @@ Follow the following steps to run the project successfully:
 
 > On Windows: venv\scripts\activate
 
-> on Linux/Max: source/venv/bin/activate
+> on Linux/Max: source venv/Scripts/activate
 
 ### 3. Install Necessary packages
 
