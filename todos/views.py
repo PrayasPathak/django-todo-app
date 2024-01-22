@@ -7,7 +7,11 @@ from .forms import AddTaskForm
 
 
 def index(request):
-    return render(request, "todos/index.html")
+    tasks = Task.objects.all()
+    context = {
+        "tasks": tasks,
+    }
+    return render(request, "todos/index.html", context)
 
 
 def add_task(request):
