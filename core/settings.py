@@ -28,8 +28,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Local Apps
     "todos.apps.TodosConfig",
+    "api.apps.ApiConfig",
     # Third party apps
     "bootstrap5",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
